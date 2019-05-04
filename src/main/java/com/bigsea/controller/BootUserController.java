@@ -10,15 +10,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping(value = {"/bootUser"})
 public class BootUserController {
+
     @Autowired
     private BootUserService bootUserService;
 
-    @RequestMapping(value = {"/toLogin"})
+    @RequestMapping(value = {"/toLogin.action"})
     public String toLogin() {
         return "login";
     }
 
-    @RequestMapping(value = {"/login"})
+    @RequestMapping(value = {"/login.action"})
     public String login(@RequestParam("name") String name, @RequestParam("password") String password) {
         BootUser bootUser = bootUserService.login(name, password);
         if(bootUser == null) {

@@ -27,7 +27,7 @@ public class TestAnimalController {
         animal1Service.
     }*/
 
-    @RequestMapping(value = {"/test"})
+    @RequestMapping(value = {"/test.action"})
     public void test() {
         animalService.testRequiredTransactionalTryException();
     }

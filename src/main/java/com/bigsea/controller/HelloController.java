@@ -11,4 +11,8 @@ public class HelloController {
     public String hello() {
         return "helloSpringBoot";
     }
+
+    public void test() {
+        System.out.println("测试");
+    }
 }
