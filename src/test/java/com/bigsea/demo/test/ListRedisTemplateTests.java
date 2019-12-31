@@ -1,4 +1,4 @@
-package com.bigsea.demo;
+package com.bigsea.demo.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,10 +10,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * 对于redis的数据类型的常用操作
  * redis共有五种数据类型，分别是String、Hash、List、Set、zset
+ * 本类对list类型的操作进行测试
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class RedisTemplateTests {
+public class ListRedisTemplateTests {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
