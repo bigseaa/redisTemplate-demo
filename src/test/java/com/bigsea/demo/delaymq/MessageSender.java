@@ -11,7 +11,7 @@ import java.util.Calendar;
 import java.util.Random;
 
 /**
- * 使用redis实现普通消息队列，实现方式使用sorted-set的数据结构
+ * 使用redis实现延时消息队列，实现方式使用sorted-set的数据结构
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

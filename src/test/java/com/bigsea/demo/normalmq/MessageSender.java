@@ -8,7 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * 使用redis使用普通消息队列，该队列为先进先出，并且每一个消息只能被一个消费者消费
+ * 使用redis实现普通消息队列，该队列为先进先出，并且每一个消息只能被一个消费者消费
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

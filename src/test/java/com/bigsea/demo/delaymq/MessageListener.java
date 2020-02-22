@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * 使用redis实现普通消息队列，实现方式使用sorted-set的数据结构
+ * 使用redis实现延时队列，实现方式使用sorted-set的数据结构
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
