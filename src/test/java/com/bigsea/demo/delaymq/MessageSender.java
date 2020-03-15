@@ -24,9 +24,9 @@ public class MessageSender {
      */
     @Test
     public void sendMessage() {
-        // 时间戳取五秒后的数据，存入sorted-set的score值
+        // 时间戳取当前时间往后推15分钟，存入sorted-set的score值
         Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.SECOND, 5);
+        calendar.add(Calendar.MINUTE, 15);
         double millisecond = calendar.getTimeInMillis();
         // 以简单的方式模拟订单号
         Random random = new Random();

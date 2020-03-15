@@ -8,7 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * 使用redis实现普通消息队列，该队列为先进先出，并且每一个消息只能被一个消费者消费
+ * 使用redis实现简单消息队列，该队列为先进先出，并且每一个消息只能被一个消费者消费
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -22,13 +22,11 @@ public class MessageSender {
     @Test
     public void sendMessage() {
         // 往队列的最右边添加元素
-        redisTemplate.opsForList().rightPush("testList", "java");
-        redisTemplate.opsForList().rightPush("testList", "c++");
-        redisTemplate.opsForList().rightPush("testList", "python");
+        redisTemplate.opsForList().rightPushAll("simpleQueue", "Java", "C++", "Python");
     }
 
     @Test
     public void remove() {
-        redisTemplate.delete("testList");
+        redisTemplate.delete("simpleQueue");
     }
 }
